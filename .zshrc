@@ -29,7 +29,7 @@ setopt share_history         # share command history data
 alias history="history 0"
 
 # prompt file
-# fpath=(~/.etc/zsh/prompt $fpath)
+# fpath=(~/.zsh/prompt $fpath)
 # autoload -Uz prompt_theme
 # prompt_theme
 
@@ -41,9 +41,9 @@ alias grep='grep --color=auto'
 alias ip='ip --color=auto'
 alias ip='ip --color=auto'
 
-alias l='ls -alF'
-alias la='ls -a'
-alias ll='ls -l'
+alias l='ls -hAl'
+alias la='ls -A'
+alias ll='ls -hl'
 # alias ls=z_ls
 alias ls-l='ls -l'
 alias lr='ls -R'
