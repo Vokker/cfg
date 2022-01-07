@@ -47,7 +47,7 @@ alias sudo='sudo '
 alias l='ls -alF'
 alias la='ls -a'
 alias ll='ls -l'
-alias ls=z_ls
+# alias ls=z_ls
 alias ls-l='ls -l'
 alias lr='ls -R'
 
