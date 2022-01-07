@@ -38,11 +38,11 @@ alias cps='cp ~/shared/zsh/.zshrc ~/.zshrc; source ~/.zshrc'
 
 # general aliases
 alias sudo='sudo '
-egrep='egrep --color=auto'
-fgrep='fgrep --color=auto'
-grep='grep --color=auto'
-ip='ip --color=auto'
-ip='ip --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip --color=auto'
+alias ip='ip --color=auto'
 
 alias l='ls -alF'
 alias la='ls -a'
