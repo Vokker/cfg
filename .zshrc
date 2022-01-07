@@ -33,9 +33,6 @@ alias history="history 0"
 # autoload -Uz prompt_theme
 # prompt_theme
 
-# TODO: REMOVE
-alias cps='cp ~/shared/zsh/.zshrc ~/.zshrc; source ~/.zshrc'
-
 # general aliases
 alias sudo='sudo '
 alias egrep='egrep --color=auto'
@@ -63,9 +60,14 @@ alias zi='zypper install'
 alias zu='zypper refresh && sudo zypper update'
 alias zs='zypper search'
 
-# enable color support 
-# color for man
+# enable colour support 
 
+# set $LS_COLORS on debian
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
+# color for man
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
 export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
 export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
