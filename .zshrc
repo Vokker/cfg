@@ -23,6 +23,7 @@ precmd() {
 }
 setopt prompt_subst
 PROMPT='${vcs_info_msg_0_}%# '
+zstyle ':vcs_info:git*' actionformats "%s  %r/%S %b %m%u%c "
 
 #--------------------------------------------------------------------#
 # completion features                                                #
