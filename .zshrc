@@ -74,7 +74,7 @@ alias sudo='sudo '
 # syslog
 if [ -e /var/log/syslog ] ; then
   alias syslog='less /var/log/syslog'
-elif check_com -c journalctl ; then
+elif type journalctl > /dev/null ; then
   alias syslog='journalctl'
 fi
 
@@ -104,9 +104,6 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 # Take advantage of $LS_COLORS for completion as well
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-
-
-
 
 #--------------------------------------------------------------------#
 # autosuggestions                                                    #
