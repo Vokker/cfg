@@ -1,5 +1,5 @@
 # My personal .zshrc, find the latest version at https://github.com/Vokker/cfg
-# It should work on 
+# Created on OpenSuse 15.4 and tested on debian based systems.
 # Most of this is copied from Kali Linux and grml config files
 # https://www.kali.org/
 # https://grml.org
