@@ -22,6 +22,7 @@ precmd() {
     vcs_info
 }
 setopt prompt_subst
+PROMPT='%*:%~ ${vcs_info_msg_0_} %% '
 PROMPT='${vcs_info_msg_0_}%# '
 zstyle ':vcs_info:git*' formats "%s  %r/%S %b (%a) %m%u%c "
 
