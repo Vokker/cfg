@@ -81,7 +81,7 @@ alias sudo='sudo '
 if [ -e /var/log/syslog ] ; then
   alias syslog='less /var/log/syslog'
 elif type journalctl > /dev/null ; then
-  alias syslog='journalctl'
+  alias syslog='journalctl -e'
 fi
 
 # aliases suse
