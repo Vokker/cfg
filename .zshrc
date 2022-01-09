@@ -10,7 +10,7 @@ setopt interactivecomments # bash like comments
 # vi mode                                                            #
 #--------------------------------------------------------------------#
 
-setopt vi
+# setopt vi
 
 #--------------------------------------------------------------------#
 # completion features                                                #
