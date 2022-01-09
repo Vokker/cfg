@@ -1,6 +1,15 @@
+# My personal .zshrc, find the latest version at https://github.com/Vokker/cfg
+# It should work on 
+# Most of this is copied from Kali Linux and grml config files
+# https://www.kali.org/
+# https://grml.org
+
 setopt interactivecomments # bash like comments
 
-# enable kali like completion features
+#--------------------------------------------------------------------#
+# completion features                                                #
+#--------------------------------------------------------------------#
+
 autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
 zstyle ':completion:*:*:*:*:*' menu select
@@ -17,7 +26,10 @@ zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# History configurations
+#--------------------------------------------------------------------#
+# History configurations                                             #
+#--------------------------------------------------------------------#
+
 HISTFILE=~/.zsh_history
 HISTSIZE=4000
 SAVEHIST=8000
@@ -32,6 +44,10 @@ alias history="history 0"
 # fpath=(~/.zsh/prompt $fpath)
 # autoload -Uz prompt_theme
 # prompt_theme
+
+#--------------------------------------------------------------------#
+# aliases                                                            #
+#--------------------------------------------------------------------#
 
 # general aliases
 alias sudo='sudo '
@@ -60,9 +76,11 @@ alias zi='zypper install'
 alias zu='zypper refresh && sudo zypper update'
 alias zs='zypper search'
 
-# enable colour support 
+#--------------------------------------------------------------------#
+# colour support                                                     #
+#--------------------------------------------------------------------#
 
-# set $LS_COLORS on debian
+# set $LS_COLORS on debian based systems
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
@@ -80,6 +98,9 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
+#--------------------------------------------------------------------#
+# autosuggestions                                                    #
+#--------------------------------------------------------------------#
 # autosuggestions need to go here, because I want to keep it all in one file
 
 # Fish-like fast/unobtrusive autosuggestions for zsh.
