@@ -4,6 +4,21 @@
 # https://www.kali.org/
 # https://grml.org
 
+
+#--------------------------------------------------------------------#
+# read $LS_COLORS                                                    #
+#--------------------------------------------------------------------#
+
+# get all non-filetype colors of $LS_COLORS and write them into variables
+if [[ -v $LS_COLORS ]] ; then
+	for line in $(echo $LS_COLORS | tr ":" "\n" | grep -v "\*\.") ; do
+        	declare $(echo "$line" | awk -F= '{print "color_"$1"=\""$2"\""}')
+	done
+fi
+
+#--------------------------------------------------------------------#
+# misc                                                               #
+#--------------------------------------------------------------------#
 setopt interactivecomments # bash like comments
 
 #--------------------------------------------------------------------#
@@ -22,7 +37,7 @@ precmd() {
     vcs_info
 }
 setopt prompt_subst
-PROMPT='%F{01}%~%f %# '
+PROMPT='%F{$color_di}%~%f %# '
 # PROMPT='${vcs_info_msg_0_}%# '
 # zstyle ':vcs_info:git*' formats "%s  %r/%S %b (%a) %m%u%c "
 
