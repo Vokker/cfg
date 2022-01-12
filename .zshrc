@@ -1010,3 +1010,11 @@ fi
 
 # Start the autosuggestion widgets on the next precmd
 add-zsh-hook precmd _zsh_autosuggest_start
+
+#--------------------------------------------------------------------#
+# syntax highlighting                                                #
+#--------------------------------------------------------------------#
+
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] ; then
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
