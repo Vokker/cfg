@@ -105,6 +105,7 @@ alias rd=rmdir
 alias rehash='hash -r'
 
 alias sudo='sudo '
+alias suvi='sudo vi'
 
 # syslog
 if [ -e /var/log/syslog ] ; then
