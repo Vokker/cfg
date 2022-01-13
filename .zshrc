@@ -119,6 +119,12 @@ alias zi='zypper install'
 alias zu='zypper refresh && sudo zypper update'
 alias zs='zypper search'
 
+# aliases docker
+alias dcl='docker container ls -a'
+alias dcs='docker container stop'
+alias dcr='docker container remove'
+alias dil='docker image ls'
+
 #--------------------------------------------------------------------#
 # colour support                                                     #
 #--------------------------------------------------------------------#
