@@ -122,7 +122,7 @@ alias zs='zypper search'
 # aliases docker
 alias dcl='docker container ls -a'
 alias dcs='docker container stop'
-alias dcr='docker container remove'
+alias dcr='docker container rm'
 alias dil='docker image ls'
 
 #--------------------------------------------------------------------#
