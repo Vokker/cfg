@@ -126,6 +126,15 @@ alias dkcrm='docker container rm'
 alias dkil='docker image ls'
 alias dkrun='docker run'
 
+function dke() {
+    if [ -n "$1" ] ; then
+        docker exec -it $1 /bin/bash
+    else
+        echo "Missing argument for for alias dke"
+        echo "Usage:  dke CONTAINER"
+    fi
+}
+
 #--------------------------------------------------------------------#
 # colour support                                                     #
 #--------------------------------------------------------------------#
