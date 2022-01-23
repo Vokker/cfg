@@ -37,7 +37,7 @@ precmd() {
     vcs_info
 }
 setopt prompt_subst
-PROMPT='%F{$color_di}%~%f %# '
+PROMPT='%n@%M %B%F{14}%~%f%b %(?..[%F{red}%?%f] )%# '
 # PROMPT='${vcs_info_msg_0_}%# '
 # zstyle ':vcs_info:git*' formats "%s  %r/%S %b (%a) %m%u%c "
 
