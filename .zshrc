@@ -120,11 +120,11 @@ alias zu='zypper refresh && sudo zypper update'
 alias zs='zypper search'
 
 # aliases docker
-alias dcl='docker container ls -a'
-alias dcs='docker container stop'
-alias dcrm='docker container rm'
-alias dil='docker image ls'
-alias drum='docker run'
+alias dkcl='docker container ls -a'
+alias dkcs='docker container stop'
+alias dkcrm='docker container rm'
+alias dkil='docker image ls'
+alias dkrun='docker run'
 
 #--------------------------------------------------------------------#
 # colour support                                                     #
