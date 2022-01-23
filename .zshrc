@@ -4,18 +4,6 @@
 # https://www.kali.org/
 # https://grml.org
 
-
-#--------------------------------------------------------------------#
-# read $LS_COLORS                                                    #
-#--------------------------------------------------------------------#
-
-# get all non-filetype colors of $LS_COLORS and write them into variables
-if [[ -v $LS_COLORS ]] ; then
-	for line in $(echo $LS_COLORS | tr ":" "\n" | grep -v "\*\.") ; do
-        	declare $(echo "$line" | awk -F= '{print "color_"$1"=\""$2"\""}')
-	done
-fi
-
 #--------------------------------------------------------------------#
 # misc                                                               #
 #--------------------------------------------------------------------#
